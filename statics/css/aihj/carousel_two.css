@@ -1,0 +1,8 @@
+.vmc-container{position: relative;}
+.vmc-viewport{overflow: hidden;}
+.vmcarousel{list-style-type: none; padding: 0; margin: 0; width: 1000%;}
+.vmcarousel:after{content: ''; display: table; clear: both;}
+.vmcarousel > li{float: left;position: relative;}
+.vmcarousel > li div.bp_div{padding: 30px 0;}
+.vmcarousel > li img{ display: block; margin: 0 auto; max-width: 55%;}
+.notransition{-webkit-transition: none !important; -moz-transition: none !important; -o-transition: none !important; -ms-transition: none !important; transition: none !important;}

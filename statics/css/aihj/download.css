@@ -1,0 +1,104 @@
+.scan_card{
+	position: relative;
+	padding: 2% 0 3%;
+}
+.scan_card_div{
+	text-align:center;
+}
+.scan_card_p{
+	font-size: 20px;
+	line-height: 30px;
+}
+.scan_card_p span{
+	padding: 5px 20px;
+	line-height: 30px;
+	background:#BEA686; 
+	color: #fff;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.scan_btn button{
+	width: 13%;
+	height: 40px;
+	color: #fff;
+	background: #BEA482;
+	border: 1px solid #9D8D77;
+	box-sizing: border-box;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 0 18%;
+}
+.scan_iphone{
+	position: absolute;
+	left: 45%;
+	top: -40%;
+	width: 10%;
+}
+.scan_iphone img{
+	width: 100%;
+	margin-bottom: 15px;
+}
+.download_app_ul{
+	padding:2% 0
+}
+.download_app_title{
+	position: relative;
+	width: 15%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 30px;
+    font-size: 2rem;
+    color: #BEA482;
+}
+.download_app_title:before{
+	position: absolute;
+    left: -100%;
+    top: 50%;
+    width: 100%;
+    content: '';
+    display: block;
+    border-bottom: 1px solid #BEA482;
+}
+.download_app_title:after{
+	position: absolute;
+    right: -100%;
+    top: 50%;
+    width: 100%;
+    content: '';
+    display: block;
+    border-bottom: 1px solid #BEA482;
+}
+.download_app_btn{
+	text-align: center;
+	padding: 20px 0;
+}
+.download_app_btn button{
+	font-size: 2rem;
+	padding: 1% 5%;
+	background: #BEA482;
+	border: 1px solid #9D8D77;
+	border-radius: 87px;
+	-webkit-border-radius: 87px;
+	-moz-border-radius: 87px;
+	color: #fff;
+}
+.download_div_l{
+	width:20%;
+	margin-left:15%;
+}
+.download_div_r{
+	width:40%;
+	margin-right:20%;
+}
+.download_div_r h3{
+	font-size:30px;
+	line-height:40px;
+	padding:20px 0;
+	text-align:center;
+}
+.download_div_r p{
+	font-size:18px;
+	line-height:40px;
+}

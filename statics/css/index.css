@@ -1,0 +1,633 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li,pre, form, fieldset, legend, button, input, textarea,th, td  {margin: 0;padding: 0;}
+*{box-sizing: border-box;}
+body {font-size: 14px;font-family: "宋体";}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal;}
+h1 a{display: block;}
+h1 a img{width: 100%;height: 100%;}
+ul, ol { list-style: none; }
+li img{width: 100%;height: 100%;}
+a{ text-decoration: none;color: #494949;}
+a:hover,a:focus{outline:none;text-decoration:none;}
+a img { border:0;}
+button, input, select, textarea { font-size: 100%;outline:none; }
+input {border:0 none;}
+table { border-collapse: collapse; border-spacing: 0; }
+.text_center{text-align: center;color: #ccc;}
+.left {float:left;}
+.right {float:right;}
+.clear{height: 0;clear: both;}
+.active>a{border-bottom: 3px solid #F86262;color: #F86262;text-decoration: none;}
+.div_margin{margin-bottom: 25px;}
+.padding{padding: 25px 0;text-align: center;}
+.full_text{text-align: right;}
+.middle{margin: 5px 0;}
+.swiper-slide img{width: 100%;height: 100%;}
+#chatBtn{right:0!important;top:50%!important;left:!important;width: 50px!important;height: 180px!important;border-radius: 5px!important;margin-top: -90px;}
+#chatBtn img{margin: 0!important;}
+@media only screen and (min-width: 768px) {
+	html{
+		font-size: 10px;
+	}
+}
+/*头部右侧*/
+#header{
+	background: #fff;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+.header_right{
+	line-height: 44px;
+	text-align: center;
+	color: #807c79;
+	cursor: pointer;
+	width: 63%;
+}
+.header_right>li{
+	width: 20%;
+	position: relative;
+}
+.header_right>li:hover>a{
+	border-bottom: 3px solid #F86262;
+}
+.header_right>li:hover .sub-menu{
+	display: block;
+}
+.header_right li a{
+	font-size: 18px;
+	padding: 0 5px 5px 5px;
+}
+.header_right li a:hover{
+	color: #F86262;
+}
+.sub-menu{
+	display: none;
+	position: absolute;
+	top: 44px;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	z-index: 3;
+}
+.sub-menu li{
+	line-height: 40px;
+}
+.sub-menu li a{
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+#header .row{
+	margin: 0;
+}
+.loginAndload{
+	width: 17%;
+	height: 44px;
+}
+.loginTel{
+	width:20%;
+	line-height: 44px;
+}
+.loginTel a{
+	display: block;
+	font-size: 1.9rem;
+}
+.header_phone{
+	display: none;
+}
+.headerSlide{
+	display: none;
+	position: absolute;
+	right: 0;
+	top:35px;
+	z-index: 2;
+	width: 30%;
+}
+/*内容*/
+/*活动介绍*/
+.activeInfo{
+	padding: 50px 0px;
+	background: #fff;
+}
+.activeInfo_title{
+	text-align: center;
+	line-height: 60px;
+	font-size: 2rem;
+	color: #726A60;
+}
+.activeInfo_left{
+	padding: 0 20px;
+	border-right: 1px solid #ccc;
+	text-indent: 2em;
+	font-size: 1.5rem;
+	color:#9B9185;
+	line-height: 40px;
+}
+.activeInfo_right{
+	padding: 0 20px;
+}
+.activeInfo_people{
+	color: #726A60;
+	text-align: center;
+	line-height: 40px;
+	padding: 5px 0;	
+}
+.activeInfo_people .remark{
+	color: #F86262;
+}
+.activeInfo_btn{
+	text-align: center;
+	padding: 10px 0;
+}
+.activeInfo_btn button{
+	border: 0;
+	background: #BEA686;
+	padding: 5px 20px;
+	color: #fff;
+	border: 1px solid #9F8A6D;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+/*banner下面内容*/
+.banner_bot{
+	width: 100%;
+}
+.banner_bot img{
+	width: 100%;
+	height: 100%;
+}
+/*实时观看*/
+#realWatch,#oneDaypat,#healthMonitor,#hotService{
+	margin-bottom: 50px;
+}
+.line{
+	display: inline-block;
+	width: 72px;
+	height: 1px;
+	background: #F86262;
+	margin-bottom: 5px;
+}
+.goHome{
+	display: inline-block;
+	font-size: 1.8rem;
+	color: #726A60;
+	text-align: center;
+	padding: 0 10px;
+}
+.realWatch_title,
+.oneDaypat_title,
+.healthMonitor_title,
+.hotService_title
+{	
+	font-family: "宋体";
+	font-size: 2.4rem; 
+	text-align: center; 
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+.realWatch_title span,
+.oneDaypat_title span,
+.healthMonitor_title span,
+.hotService_title span,
+.join_title span{
+	font-family: "宋体";
+	letter-spacing: 0.18px;
+	color: #333;
+}
+.realWatch_info,
+.oneDaypat_info,
+.healthMonitor_info,
+.hotService_info,
+.join_info{
+	text-align: center;
+}
+.realWatch_ul_li img{
+	width: 100%;
+	height: 100%;
+}
+.realWatch_bot p,
+.oneDaypat_bot p,
+.healthMonitor_bot p,
+.hotService_bot p,
+.join_bot p{
+	text-align: center;
+	color: #666;
+}
+
+/*每日一拍*/
+#oneDaypat{
+	padding:20px 0 30px;
+	background: #FAFAFA;
+}
+.oneDaypat_ul_li_con{
+	border: 1px solid rgba(137,89,29,1);
+	border-top: 0;
+	padding-bottom: 50px;
+	box-sizing: border-box;
+}
+.oneDaypat_ul_li h3{
+	font-family: "宋体";
+	font-size: 2rem;
+	padding:30px 10px 10px 15px;
+}
+.oneDaypat_ul_li p{
+	font-family: "微软雅黑";
+	color: #ccc;
+	margin-left: 10%;
+}
+/*健康监测*/
+.healthMonitor_bg{
+	width: 100%;
+	background: url(../images/aihj/t3_bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+.healthMonitor_ul_li{
+	margin:45% 0 5%;
+	text-align: center;
+}
+.healthMonitor_ul_li img{
+	width: 60%;
+}
+.healthMonitor_ul_li p{
+	font-size: 1.7rem;
+	color: #FFFFFF;
+	letter-spacing: 0.13px;
+	text-align: center;
+}
+/*贴心服务*/
+#hotService{
+	
+}
+.hotService_ul_li{
+	width: 48%;
+}
+/*加入我们*/
+#join{
+	background: #FAFAFA;
+	padding-bottom:50px ;
+}
+.join_title{
+	font-size: 3rem;
+	padding: 25px 0;
+	text-align: center;
+}
+.join_info span{
+	font-size: 1.8rem;
+	color: #333;
+}
+.join_ul_li{
+	position: relative;
+}
+.join_ul_li h3{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 2.4rem;
+	line-height: 52px;
+	text-align: center;
+	width: 100%;
+	margin-top: 5%;
+}
+.join_ul_li ul{
+	position: absolute;
+	left: 0;
+	top: 20%;
+	width: 100%;
+	height: 80%;
+	margin: 0 5px;
+}
+.product_ul li,
+.operative_ul li,
+.skill_ul li{
+	width: 100%;
+}
+.product_ul li i,
+.operative_ul li i,
+.skill_ul li i{
+	margin: 0px 25px;
+	display: inline-block;
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 100%;
+}
+.product_ul li i{
+	background: #B0BD76;
+}
+.operative_ul li i{
+	background: #5DBBA3;
+}
+.skill_ul li i{
+	background: #5C81B8;
+}
+.product_ul li span,
+.operative_ul li span,
+.skill_ul li span{
+	margin-left: 25%;
+	color: #666;
+	line-height: 10rem;
+}
+.skill_ul li span{
+	line-height: 8rem;
+}
+/*关于我们*/
+#about{
+	background: url(../images/aihj/t6_bg.png) no-repeat;
+	background-size: 100% 100%;
+	padding:0 1rem 11rem;
+}
+#about h2{
+	font-size: 3.2rem;
+	line-height: 100px;
+	color: #ccc;
+	letter-spacing: 0.24px;
+}
+#about p{
+	line-height: 40px;
+	color: #333333;
+	letter-spacing: 0.13px;
+}
+/*公司信息*/
+#companyInfopc{
+	background: #463C34;
+	padding: 20px 0;
+	line-height: 40px;
+	color: #fff;
+}
+.companyInfo_left{
+	position: relative;
+}
+.companyInfo_left_topul{
+	border-bottom: 1px solid #ccc;
+	padding: 0 5px;
+	overflow: hidden;
+}
+.companyInfo_left_botdiv{
+	padding-top: 50px;
+	overflow: hidden;
+}
+.companyInfo_left_topul li{
+	font-size: 2rem;
+}
+.companyInfo_left_botdiv ul li a{
+	font-size: 1.7rem;
+	color:#fff;
+	cursor: pointer;
+}
+.companyInfo_left_botdiv ul li a:hover{
+	text-decoration: none;
+}
+.companyInfo_left_topul li,
+.companyInfo_left_botdiv ul{
+	position: relative;
+	color: #fff;
+	float: left;
+	width: 16%;
+	box-sizing: border-box;
+	line-height: 40px;
+}
+.underLine{
+	position: absolute;
+	top:38px;
+	left: 5px;
+	display: block;
+	width: 10%;
+	line-height: 0;
+	border-bottom: 4px solid #AAA49D;
+}
+.companyInfo_left_topul li:nth-child(5),
+.companyInfo_left_botdiv ul:nth-child(5){
+	width: 20%;
+}
+.companyInfo_right{
+	text-align: center;
+}
+.companyInfo_right_p{
+	line-height: 40px;
+	font-size: 2rem;
+	color: #fff;
+}
+.companyInfo_right dl{
+	padding-top: 50px;
+}
+.companyInfo_right dl dt{
+	width: 60%;
+	margin: 0 auto;
+}
+.companyInfo_right dl dt img{
+	width: 100%;
+}
+.companyInfo_right dl dd{
+	line-height: 30px;
+}
+.marBot{
+	margin-bottom: 20px;
+}
+/*底部*/
+#footer{
+	background: #251E18;
+	color: #fff;
+	line-height: 40px;
+	font-size: 2rem;
+}
+#toTop{
+	position:fixed;
+	right: 0;
+	top: 50%;
+	width: 50px;
+	margin-top: 100px;
+	z-index: 99999;
+}
+#toTop img{
+	width: 100%;
+}
+#companyInfophone{display: none;}
+@media only screen and (min-width: 768px) and (max-width: 1169px) {
+	.product_ul li span,
+	.operative_ul li span,
+	.skill_ul li span{
+		margin-left: 25%;
+		color: #666;
+		line-height: 7rem;
+	}
+	.skill_ul li span{
+		line-height: 5rem;
+	}
+}
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+	.header_pc{
+		display: none;
+	}
+	.header_phone{
+		display: block;
+	}
+	#menuHeader{
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		background: transparent;
+		width: 28px;
+		height: 28px;
+	}
+	
+	.headerSlide li{
+		line-height: 30px;
+		border-bottom: 1px solid #DBDBDB;
+		box-sizing: border-box;
+		background: #AAA49D;
+	}
+	.headerSlide li a{
+		padding: 0px 10px;
+		font-size: 2rem;
+		color: #fff;
+		display: block;
+	}
+	#menuHeader img{
+		width: 100%;
+	}
+	#companyInfophone{
+		display: block;
+		background: #000;
+	}
+	#toTop{
+		position: fixed;
+		left: 0;
+		top: 50%;
+		width: 50px;
+    	margin-top: 100px;
+	}
+	#companyInfopc{display: none;}
+	.activeInfo_right{padding: 0;margin: 50% 0;}
+	.remark{display: block;}
+	html{
+		font-size: 8px;
+	}
+	.swiper-pagination-bullet{
+		width: 20px;
+		height: 4px;
+	}
+	.join_ul_li h3 {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    font-size: 2rem;
+	    line-height: 20px;
+	    text-align: center;
+	    width: 100%;
+	    margin-top: 7%;
+	}
+	.product_ul li i, .operative_ul li i, .skill_ul li i {
+	    display: inline-block;
+	    width: 10px;
+	    height: 10px;
+	    border-radius: 100%;
+	    margin-left: 10px;
+	    margin-right: 7px;
+	}
+	.product_ul li span, .operative_ul li span, .skill_ul li span {
+	    color: #666;
+	    line-height: 3.5rem;
+	    margin-left: 0;
+	}
+	.skill_ul li span {
+	    line-height: 2.8rem;
+	}
+	#footer{
+		font-size: 1.5rem;
+	}
+	.healthMonitor_ul_li img {
+	    width: 100%;
+	}
+	.code li p{
+		color: #fff;
+		text-align: center;
+		font-size: 1.2rem;
+	}
+	.oneDaypat_ul_li_con{
+		padding-bottom: 20px;
+	}
+	.oneDaypat_ul_li h3{
+		padding-top: 20px;
+	}
+	.companyInfo_title h3{
+		font-size: 2.2rem;
+	}
+	.companyInfo_footer_let span{
+		font-size: 1.5rem;
+	}
+	#chatBtn{
+		right:0!important;
+		top:50%!important;
+		width: 50px!important;
+		height: 180px!important;
+		padding: 10px!important;
+		margin-top: -90px;
+	}
+	.service_details ul{
+		display: none;
+	}
+	.service_details p{
+		position: relative;
+		line-height: 40px;
+		color: #fff;
+		background: #463C34;
+		font-size: 2rem;
+		border-bottom: 1px solid #939290;
+		padding: 0 10px;
+	}
+	.service_details p .small_sel{
+		padding: 0 10px;
+		position: absolute;
+		right: 0;
+		top: 16px;
+		width: 36px;
+		text-align: center;
+		display: block;
+	}
+	.service_details p .small_sel img{
+		width: 100%;
+	}
+	.service_details ul li{
+		line-height: 40px;
+		background: #AAA49D;
+		font-size: 1.7rem;
+		border-bottom: 1px solid #939290;
+		padding: 0 10px;
+	}
+	.service_details ul li a{
+		display: block;
+		color: #fff;
+	}
+	.contant_ul{
+		overflow: hidden;
+		background: #AAA49D;
+	}
+	.contant_ul li{
+		width: 40%;
+		margin: 5px 5%;
+		border: 0!important;
+	}
+	.contant_ul li dl{
+		text-align: center;
+		
+	}
+	.contant_ul li dl dt{
+		width: 80%;
+		margin: 0 auto;
+	}
+	.contant_ul li dl dd{
+		line-height: 30px;
+		color: #fff;
+	}
+}

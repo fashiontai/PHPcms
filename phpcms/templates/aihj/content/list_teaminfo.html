@@ -1,0 +1,169 @@
+{template "content","header"}
+<!--main-->
+<div class="main">
+	<div class="team_top">
+		<img src="{IMG_PATH}aihj/teaminfobanner.png"/>
+	</div>
+	<div class="managers">
+		<div class="container">
+			<div class="row">
+				<ul class="managers_ul">
+					<li class="col-lg-4 col-lg-offset-2 ">
+						<div class="managers_div_top">
+							<img src="{IMG_PATH}aihj/manager/lz_big.png" alt="">
+						</div>
+						<div class="managers_div_bot">
+							<p>李建平</p>
+							<h2>创始人</h2>
+							<span class="img_down" rel="0">
+								<img src="{IMG_PATH}aihj/manager/manager_info.png" alt="">
+							</span>
+						</div>
+					</li>
+					<section>
+						<div class="sec_div">
+							<img src="{IMG_PATH}aihj/manager/lz_small.png" alt="">
+						</div>
+						<h3>李建平</h3>
+						<p>十余年外企、国有上市公司高层管理经验，在战略规划、产品研发和营销、供应链管理等方面表现突出，屡创佳绩。拥有企业领导体系的构建实操经验，尤其在战略规划、CIS设计与营销、市场营销、创客创业等方面拥有丰富的实践经验。 对理想、事业不懈追求，始终坚持大市场造就大企业的信念，为老年人及互联网养老服务开拓一个全新的领域。</p>
+						<div class="manager_name">
+							创始人
+						</div>
+						<span class="colse_sec"></span>
+					</section>
+					<li class="col-lg-4">
+						<div class="managers_div_top">
+							<img src="{IMG_PATH}aihj/manager/cz_big.png" alt="">
+						</div>
+						<div class="managers_div_bot">
+							<p>陈楠</p>
+							<h2>联合创始人</h2>
+							<span class="img_down" rel="1">
+								<img src="{IMG_PATH}aihj/manager/manager_info.png" alt="">
+							</span>
+						</div>
+					</li>
+					<section>
+						<div class="sec_div">
+							<img src="{IMG_PATH}aihj/manager/cz_small.png" alt="">
+						</div>
+						<h3>陈楠</h3>
+						<p>十余年销售管理市场开发经验，曾供职于跨国公司及国有上市公司高层管理岗位，参与开发过国内大型行业设备选型推广工作。擅长互联网营销、品牌营销，在传统企业转型、数据分析、新媒体运营方面有深入研究。</p>
+						<div class="manager_name">
+							联合创始人
+						</div>
+						<span class="colse_sec"></span>
+					</section>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="technical">
+		<div class="container">
+			<div class="row">
+				<ul class="technical_ul"> 
+					<li class="col-lg-3">
+						<dl>
+							<dt>
+								<img src="{IMG_PATH}aihj/manager/js.png" alt="">
+							</dt>
+							<dd>
+								技术中心负责人
+							</dd>
+						</dl>
+						<div class="technical_name">
+							冀炜
+						</div>
+					</li>
+					<li class="col-lg-3">
+						<dl>
+							<dt>
+								<img src="{IMG_PATH}aihj/manager/yy.png" alt="">
+							</dt>
+							<dd>
+								运营中心负责人
+							</dd>
+						</dl>
+						<div class="technical_name">
+							蒋雪
+						</div>
+					</li>
+					<li class="col-lg-3">
+						<dl>
+							<dt>
+								<img src="{IMG_PATH}aihj/manager/cp.png" alt="">
+							</dt>
+							<dd>
+								产品中心负责人
+							</dd>
+						</dl>
+						<div class="technical_name">
+							宋帅
+						</div>
+					</li>
+					<li class="col-lg-3">
+						<dl>
+							<dt>
+								<img src="{IMG_PATH}aihj/manager/kf.png" alt="">
+							</dt>
+							<dd>
+								客服中心负责人
+							</dd>
+						</dl>
+						<div class="technical_name">
+							张天武
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$('.img_down').on('click',function(){
+				$('.managers_ul section').hide();
+				var num = $(this).attr('rel');
+				$('.managers_ul section').eq(num).show();
+			})
+			$('.colse_sec').on('click',function(){
+				$(this).parents('section').hide();
+			})
+		})
+	</script>
+	<!--<div class="col-left">
+    	<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</div>
+    	{pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+        <ul class="list lh24 f14">
+{loop $data $r}
+	<li><span class="rt">{date('Y-m-d H:i:s',$r[inputtime])}</span>·<a href="{$r[url]}" target="_blank"{title_style($r[style])}>{$r[title]}</a></li>
+	{if $n%5==0}<li class="bk20 hr"></li>{/if}
+{/loop}
+        </ul>
+        <div id="pages" class="text-c">{$pages}</div>
+{/pc}
+  </div>
+    <div class="col-auto">
+        <div class="box">
+            <h5 class="title-2">频道总排行</h5>
+             {pc:content action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
+            <ul class="content digg">
+				{loop $data $r}
+					<li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+				{/loop}
+            </ul>
+            {/pc}
+        </div>
+        <div class="bk10"></div>
+        <div class="box">
+            <h5 class="title-2">频道本月排行</h5>
+             {pc:content action="hits" catid="$catid" num="8" order="monthviews DESC" cache="3600"}
+            <ul class="content rank">
+				{loop $data $r}
+				<li><span>{number_format($r[monthviews])}</span><a href="{$r[url]}"{title_style($r[style])} class="title" title="{$r[title]}">{str_cut($r[title],56,'...')}</a></li>
+				{/loop}
+            </ul>
+            {/pc}
+        </div>
+    </div>-->
+</div>
+{template "content","footer"}

@@ -1,0 +1,143 @@
+.team_top{
+	margin-bottom: 30px;
+}
+.team_top img{
+	width: 100%;
+}
+/*管理人员*/
+.managers{
+	padding-top: 40px;
+	margin-bottom: 50px;
+}
+.managers_ul{
+	padding-top: 161px;
+}
+.managers_ul li{
+	position: relative;
+}
+.managers_div_top{
+	position: absolute;
+	left: 50%;
+	margin-left: -161px;
+	top: -161px;
+}
+.managers_div_bot{
+	padding-top: 161px;
+	text-align: center;
+	padding-bottom: 10px;
+	background: #F8F8F8;
+}
+.managers_div_bot p{
+	padding:10px;
+	font-size: 20px;
+	font-weight: 500;
+	color: #666;
+}
+.managers_div_bot h2{
+	line-height: 40px;
+	font-size: 24px;
+	color: #726A60;
+	margin-bottom: 10px;
+}
+.img_down{
+	display: block;
+	width: 68px;
+	height: 34px;
+	margin: 0 auto;
+}
+.img_down img{
+	width: 25%;
+}
+.managers_ul section{
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 36%;
+	padding: 75px 0 30px;
+	display: none;
+	background: #fff;
+	border: 2px solid #6A6053;
+	border-radius: 10px;
+	z-index: 2;
+}
+.sec_div{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	left: 50%;
+	margin-left:-75px;
+	top:-75px;
+}
+.sec_div img{
+	width: 100%;
+}
+.managers_ul section h3{
+	line-height: 40px;
+	font-size: 24px;
+	text-align: center;
+	color:#333;
+}
+.managers_ul section p{
+	line-height:35px;
+	font-size: 20px;
+	color: #666;
+	padding: 10px 50px;
+}
+.manager_name{
+	position: absolute;
+	left: 50%;
+	transform:translateX(-50%);
+	bottom: -15px;
+    padding: 6px 15px;
+	background:#6A6053;
+	color: #fff;
+}
+.colse_sec{
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(../../images/aihj/close_iframe.png) no-repeat;
+}
+/*技术骨干*/
+.technical{
+	position: relative;
+	background: #FFFDF9;
+	padding: 30px 0;
+	margin-bottom: 50px;
+}
+.technical_ul li dl{
+	width: 80%;
+	margin: 0 auto;
+	border: 1px solid #666666;
+}
+.technical_ul li dl dt img{
+	width: 100%;
+}
+.technical_ul li dl dd{
+	color: #726A60;
+	line-height: 30px;
+	font-size: 20px;
+	margin: 20px 0 30px;
+	text-align: center;
+}
+.technical_name{
+	position: absolute;
+	left: 50%;
+	margin-left:-56px;
+	bottom: -17px;
+	display: block;
+	width: 113px;
+	height: 34px;
+	color: #fff;
+	line-height: 34px;
+	text-align: center;
+	background: url(../../images/aihj/manager/name_bg.png) no-repeat;
+}
+
+
+
+

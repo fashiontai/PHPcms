@@ -1,0 +1,122 @@
+.businessPartner{
+	position: relative;
+	padding: 30px 0;
+}
+.businessPartner_div{
+	margin: 30px 0;
+	overflow: hidden;
+	height: 300px;
+	position: relative;
+}
+.businessPartner_box{
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+.businessPartner_ul{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.prev_bp{
+	display: block;
+	position: absolute;
+	left: 8%;
+	top: 50%;
+	margin-top: -24px;
+}
+.next_bp{
+	display: block;
+	position: absolute;
+	right: 8%;
+	top: 50%;
+	margin-top: -24px;
+}
+.businessPartner_ul>li{
+	float: left;
+	width: 200px;
+	margin: 0 17px;
+	padding: 10px;
+	background: #FFFDF9;
+	border: 1px solid #BEA482;
+	text-align: center;
+}
+.businessPartner_ul>li .bp_div img{
+	width: 100%;
+}
+.business_ul_div{
+	width:80%;
+	margin:0 auto;
+	background:#FFFDF9;
+	border:1px solid #BEA482;
+}
+.bp_p{
+	margin: 10px 0;
+	text-align: center;
+	font-size: 1.5rem;
+}
+.bp_btn{
+	display: block;
+	width: 70%;
+	height: 40px;
+	margin-left: 15%;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	color: #fff;
+	text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+	background: #BEA482;
+	border:1px solid #D8D8D8;
+	border-radius: 16px;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+}
+.recruitmentProcess{
+	padding: 30px 0 50px;
+	background: #FFFEFA;
+}
+.rp_img{
+	margin-top: 30px;
+}
+.bobm_box{
+	display: none;
+	position: absolute;
+	left: 35%;
+	top: 5%;
+	width: 30%;
+	height: 90%;
+	z-index: 2;
+	opacity: 0.93;
+	filter:alpha(opacity=93);
+	background: #BEA482;
+	border: 4px solid #fff;
+	box-shadow: 0 4px 6px 0 rgba(180,180,180,0.50);
+	border-radius: 20px;
+	padding: 2%;
+}
+.bobm_title{
+	height: 10%;
+	line-height: 1.5;
+	font-size: 2rem;
+	color: #fff;
+	text-align: center;
+}
+.nano{
+	width: 500px;
+	line-height: 40px;
+	height: 300px;
+}
+.bobm_close{
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 28px;
+}
+.bobm_close img{
+	width: 100%;
+}

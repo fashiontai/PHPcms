@@ -1,0 +1,322 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li,pre, form, fieldset, legend, button, input, textarea,th, td  {margin: 0;padding: 0;}
+body {font-size: 16px;font-family: "宋体";}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal;}
+h1 a{display: block;}
+ul, ol { list-style: none; }
+li img{width: 100%;height: 100%;}
+a{ text-decoration: none;color: #494949;}
+a:hover{text-decoration:none;color: #F86262;}
+a:focus{outline:none;text-decoration:none;}
+a img { border:0;}
+button, input, select, textarea { font-size: 100%;outline:none; }
+input {border:0 none;}
+table { border-collapse: collapse; border-spacing: 0; }
+.flex_row_ul{display: flex;flex-flow: row nowrap;justify-content: space-between;align-items: center;}
+.flex_col_ul{display: flex;flex-flow: column wrap;justify-content: space-around;align-items: center;}
+.flex_col_lef_ul{display: flex;flex-flow: column wrap;justify-content: space-around;align-items: flex-start;}
+.text_center{text-align: center;color: #ccc;}
+.left {display:inline;float:left;}
+.right {display:inline;float:right;}
+.l{position: absolute; left: 0;top: 0;}
+.r{position: absolute;right: 0;top: 0;}
+.active a{border-bottom: 3px solid #F86262;color: #F86262;padding-bottom: 5px;text-decoration: none;}
+.div_margin{margin-bottom: 25px;}
+.padding{padding: 25px 0;text-align: center;}
+.full_text{text-align: right;}
+.middle{margin-top: 20px;}
+.swiper-slide img{width: 100%;height: 100%;}
+/*头部右侧*/
+#header{
+	background: #fff;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.logo{
+	width: 30%;
+}
+.header_right,.slide_right{
+	width: 50%;
+	line-height: 80px;
+	text-align: center;
+	color: #807c79;
+	cursor: pointer;
+	overflow: hidden;
+}
+.header_right li,.slide_right li{
+	width: 25%;
+}
+.header_right li a,.slide_right li a{
+	font-size: 20px;
+}
+#slide{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	display: none;
+	background: #fff;
+	z-index: 9998;
+	box-shadow: 0px 2px 2px #f2f2f2;
+}
+.slide{
+	margin: 0 auto;
+}
+/*内容*/
+/*客服服务*/
+#customService{
+	position: fixed;
+	right: 0;
+	top: 50%;
+	margin-top: -50px;
+	width:30px;
+	height: 100px;
+	background: #F86262;
+	color: #fff;
+	text-align: center;
+	padding: 6px 0;
+	cursor: pointer;
+	z-index: 9999;
+}
+/*banner下面内容*/
+.banner_bot{
+	width: 100%;
+	height: 100%;
+}
+.banner_bot img{
+	width: 100%;
+	height: 100%;
+}
+/*实时观看*/
+#realWatch,#oneDaypat,#healthMonitor,#hotService{
+	margin-bottom: 50px;
+}
+.line{
+	display: inline-block;
+	width: 72px;
+	height: 1px;
+	background: #F86262;
+	margin-bottom: 5px;
+}
+.goHome{
+	display: inline-block;
+	font-size: 18px;
+	color: #726A60;
+	text-align: center;
+	padding: 0 10px;
+}
+.realWatch_title,
+.oneDaypat_title,
+.healthMonitor_title,
+.hotService_title
+{	
+	font-family: "宋体";
+	font-size: 24px; 
+	text-align: center; 
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+.realWatch_title span,
+.oneDaypat_title span,
+.healthMonitor_title span,
+.hotService_title span,
+.join_title span{
+	font-family: "宋体";
+	letter-spacing: 0.18px;
+	color: #333;
+}
+.realWatch_info,
+.oneDaypat_info,
+.healthMonitor_info,
+.hotService_info,
+.join_info{
+	text-align: center;
+}
+.realWatch_ul_li{
+	width: 30%;
+}
+.realWatch_ul_li img{
+	width: 100%;
+	height: 100%;
+}
+.realWatch_bot p,
+.oneDaypat_bot p,
+.healthMonitor_bot p,
+.hotService_bot p,
+.join_bot p{
+	text-align: center;
+	color: #666;
+}
+
+/*每日一拍*/
+#oneDaypat{
+	padding:20px 0 30px;
+	background: #FAFAFA;
+}
+.oneDaypat_ul_li{
+	border: 1px solid #ccc;
+	padding-bottom: 50px;
+	width: 32%;
+}
+.oneDaypat_ul_li h3{
+	font-family: "宋体";
+	font-size: 20px;
+	margin:30px 10px 10px 0px;
+}
+.oneDaypat_ul_li p{
+	font-family: "宋体";
+	color: #ccc;
+}
+/*健康监测*/
+.healthMonitor_bg{
+	width: 100%;
+	height: 328px;
+	background: url(../images/aihj/t3_bg.png) no-repeat;
+	background-size: cover;
+}
+.healthMonitor_ul_li{
+	width: 12.5%;
+}
+.healthMonitor_ul_li img{
+	width: 100%;
+}
+.healthMonitor_ul_li p{
+	font-size: 17px;
+	color: #FFFFFF;
+	letter-spacing: 0.13px;
+	text-align: center;
+}
+/*贴心服务*/
+#hotService{
+	
+}
+.hotService_ul_li{
+	width: 48%;
+}
+/*加入我们*/
+#join{
+	background: #FAFAFA;
+	padding-bottom:50px ;
+}
+.join_title{
+	font-size: 30px;
+	padding: 25px 0;
+	text-align: center;
+}
+.join_info span{
+	font-size: 18px;
+	color: #333;
+}
+.join_ul_li{
+	position: relative;
+}
+.join_ul_li h3{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 24px;
+	line-height: 52px;
+	text-align: center;
+	width: 100%;
+	margin-top: 5%;
+}
+.join_ul_li ul{
+	position: absolute;
+	left: 0;
+	top: 20%;
+	width: 100%;
+	height: 80%;
+	margin: 0 5px;
+}
+.product_ul li,
+.operative_ul li,
+.skill_ul li{
+	width: 100%;
+}
+.product_ul li i,
+.operative_ul li i,
+.skill_ul li i{
+	margin: 0px 25px;
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border-radius: 100%;
+}
+.product_ul li i{
+	background: #B0BD76;
+}
+.operative_ul li i{
+	background: #5DBBA3;
+}
+.skill_ul li i{
+	background: #5C81B8;
+}
+/*关于我们*/
+#about{
+	height: 540px;
+	background: url(../images/aihj/t6_bg.png) no-repeat;
+	background-size: 100% 100%;
+}
+#about h2{
+	font-size: 32px;
+	line-height: 100px;
+	color: #ccc;
+	letter-spacing: 0.24px;
+}
+#about p{
+	font-size: 20px;
+	line-height: 40px;
+	color: #333333;
+	letter-spacing: 0.13px;
+}
+/*公司信息*/
+#companyInfo{
+	height:350px;
+	background: #463C34;
+	padding: 50px 0;
+}
+.companyInfo_title{
+	border-bottom: 1px solid #fff;
+	position: relative;
+	margin-bottom: 30px;
+}
+.companyInfo_title h3{
+	width: 200px;
+	font-size: 18px;
+	color: #FFFFFF;
+	letter-spacing: 0.13px;
+	padding-bottom: 15px;
+}
+.companyInfo_title span{
+	display: block;
+	width: 200px;
+	height: 6px;
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	background: #fff;
+}
+.companyInfo_footer_let span{
+	line-height: 45px;
+	font-size: 18px;
+	color: #FFFFFF;
+	letter-spacing: 0.13px;
+}
+.code li{
+	width: 40%;
+	display: inline-block;
+	margin-bottom:50px;
+}
+.code li img{
+	width: 100%;
+	height: 100%;
+}
+.code li p{
+	color: #fff;
+	text-align: center;
+}
+/*底部*/
+#footer{
+	background: #251E18;
+	color: #fff;
+	line-height: 40px;
+}

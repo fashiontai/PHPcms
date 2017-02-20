@@ -1,0 +1,254 @@
+.team_top{
+	margin-bottom: 30px;
+}
+.team_top img{
+	width: 100%;
+}
+/*管理人员*/
+.managers{
+	margin-bottom: 20px;
+}
+.team_peoinfo{
+	position: relative;
+	background: #FAFAFC;
+	height: 330px;
+	margin-bottom: 10%;
+}
+.team_peoinfo section{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 200px;
+}
+.team_peoinfo_div{
+	width: 60%;
+	margin: 0 auto;
+}
+.team_peoinfo_title{
+	line-height: 40px;
+	padding-top: 10px;
+	text-align: center;
+	font-size: 30px;
+}
+.team_peoinfo_des{
+	width: 100px;
+	line-height: 30px;
+	position: relative;
+	margin-left: 65%;
+}
+.team_peoinfo_con{
+	text-align: center;
+	line-height: 30px;
+}
+.team_peoinfo_des:before{
+	display: block;
+	content: '';
+	width: 50px;
+	border: 1px solid #666;
+	position: absolute;
+	left: -60px;
+	top: 15px;
+}
+.managers_ul{
+	position: absolute;
+	top: 200px;
+	left: 15%;
+	width: 70%;
+	display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+span.s{
+	background: url(../../images/aihj/icon.png) no-repeat;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	/*background-color: #BEA482;*/
+	cursor: pointer;
+}
+/*.managers_ul span.prev_gl{
+	position: absolute;
+	left: -40px;
+	top: 84px;
+	background-position: -195px -1px;
+}
+.managers_ul span.next_gl{
+	position: absolute;
+	right: -40px;
+	top: 84px;
+	background-position: -249px -1px;
+}*/
+.team_peoinfo li img{
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+}
+/*技术骨干*/
+.technical{
+	position: relative;
+	background: #FFFDF9;
+	padding: 30px 0;
+}
+.technical_peoinfo{
+	position: relative;
+}
+.technical_peoinfo section{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40%;
+    transform: translate(-50% ,-50%);
+    background: url(../../images/aihj/rectangle.png) no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+    display: none;
+}
+.technical_peoinfo_h{
+	
+	text-align: center;
+	line-height: 40px;
+	font-size: 24px;
+}
+.technical_peoinfo_con{
+	line-height: 30px;
+	text-indent: 2em;
+}
+.technical_peoinfo_title{
+	text-align: right;
+	font-size: 20px;
+	padding: 10px 0;
+}
+.h_bg{
+	position: relative;
+	background: url(../../images/aihj/hbxz.png) no-repeat;
+	padding-left: 14%;
+    margin-left: -23px;
+	margin-top: 7%;
+	height: 60px;
+	line-height: 60px;
+    font-size: 30px;
+    color: #fff;
+    padding-left: 10%;
+}
+.h_bg:before{
+	position: absolute;
+	left: 0;
+	bottom: -17px;
+	display: block;
+	content: '';
+	width:0; 
+    height:0; 
+    border-left:20px solid transparent;
+    border-right:20px solid transparent;
+    border-bottom:20px solid #8D7A61;
+    transform: rotateZ(45deg);
+}
+.technical_peoinfo section dl{
+	width: 100%;
+	height: 78%;
+	padding: 5% 5%;
+	overflow: hidden;
+}
+/*.technical_peoinfo section dl::after{
+	display: block;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}*/
+.technical_peoinfo section dl dt{
+	width: 40%;
+	margin-right: 5%;
+}
+.technical_peoinfo section dl dd{
+	width: 55%;
+}
+.technical_peoinfo section dl dt img{
+	width: 100%;
+}
+.bg_close{
+	position: absolute;
+	right: 5%;
+	top: 5%;
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+.bg_close img{
+	width:100%;
+}
+.technical_div{
+	position: relative;
+	width: 70%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.technical_ul{
+	position: absolute;
+	left:0;
+	top: 0;
+}
+.technical_ul li{
+	position: relative;
+	display: inline-block;
+	width: 197px;
+	padding:0 10px;
+}
+.text_middle_h{
+	text-align: center;
+	line-height: 40px;
+	font-size: 24px;
+}
+.text_middle_p{
+	text-align: center;
+	color: #726A60;
+	line-height: 32px;
+}
+.prev_js{
+	position: absolute;
+	left: 10%;
+	top: 50%;
+	margin-top: -15px;
+	background-color: transparent;
+	background-position: 3px 0px !important;
+}
+.next_js{
+	position: absolute;
+	right: 10%;
+	top: 50%;
+	margin-top: -15px;
+	background-color: transparent;
+	background-position: -54px 0px !important;
+}
+.technical_ul_down{
+	display: block;
+	width: 30px;
+	height: 5px;
+	background: url(../../images/aihj/icon.png) no-repeat;
+	background-position: -125px -9px;
+	margin: 0 auto;
+}
+.click_more{
+	position: absolute;
+	bottom: 25%;
+	left: 40%;
+	display: block;
+	width: 28px;
+	height: 28px;
+}
+.click_more img{
+	width: 100% !important;
+}
+
+
+
+
+
+
+

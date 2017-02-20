@@ -1,0 +1,20 @@
+<style>
+a{
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+	line-height: 44px;
+	font-size: 18px;
+	padding: 0 10px;
+	color:#494949;
+	font-family: '宋体';
+}
+a:hover{
+	color:#494949;
+}
+</style>
+<!--大帅比-->
+<body style="background-color:transparent;margin: 0;padding: 0;">
+<div>{if $_username}{L('hellow')} {get_nickname()}, <a href="{APP_PATH}index.php?m=member&siteid={$siteid}" target="_blank">{L('member_center')}</a> <a href="{APP_PATH}index.php?m=member&c=index&a=logout&forward={urlencode($_GET['forward'])}&siteid={$siteid}" target="_top">{L('logout')}</a>{else}<a href="{APP_PATH}index.php?m=member&c=index&a=register&siteid={$siteid}" target="_blank">{L('register')}</a><a href="{APP_PATH}index.php?m=member&c=index&a=login&forward={urlencode($_GET['forward'])}&siteid={$siteid}" target="_top">{L('login')}</a>
+{/if}</div>
+</body>

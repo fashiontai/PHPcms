@@ -1,0 +1,103 @@
+{template "content","header"}
+<!--main-->
+<div class="main">
+	<div class="firm_top">
+		<img src="{IMG_PATH}aihj/companyinfo/firmbanner.png"/>
+	</div>
+	<div class="firminfo">
+		<h2 class="title">公司简介</h2>
+		<p class="title_upword">PROFILE</p>
+		<div class="firminfo_con">
+			{pc:content  action="position" posid="19" order="listorder DESC" num="1" thumb="1"}
+			{loop $data $key $r}
+			<div class="firminfo_left left">
+				<img src="{$r[thumb]}"/>
+			</div>
+			<div class="firminfo_right left">
+				<p class="word">{$r['content']}</p>
+			</div>
+			<div class="clear"></div>
+			{/loop}
+			{/pc}
+		</div>
+	</div>
+	<!--<div class="firmhonor">
+		<div class="container">
+			<div class="row">
+				<h2 class="title">公司荣誉</h2>
+				<p class="title_upword">GLORIES OF COMPANY</p>
+				{pc:content  action="position" posid="18" order="listorder DESC" num="10" thumb="1"}
+				<ul class="firmhonor_ul">
+				{loop $data $key $r}
+				<li class="col-lg-4 col-md-4">
+					<img src="{$r['thumb']}"/>
+					<section>
+						<h3 class="h3_middle">{$r['title']}</h3>
+						<span class="h3_middle_span"></span>
+						<p class="h3_middle_des">{$r['description']}</p>
+						<p class="h3_p_middle">{$r['content']}</p>
+					</section>
+				</li>
+				{/loop}
+				</ul>
+				{/pc}
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('.firmhonor_ul li').hover(function(){
+			$(this).find('section').slideDown('1000');
+		},function(){
+			$(this).find('section').slideUp('1000');
+		})
+	</script>-->
+	<div class="organizational">
+		<div class="container">
+			<div class="row">
+				{pc:content  action="position" posid="20" order="listorder DESC" num="1" thumb="1"}
+				{loop $data $key $r}
+				<h2 class="title">{$r['title']}</h2>
+				<p class="title_upword">{$r['description']}</p>
+				<img src="{$r[thumb]}"/>
+				{/loop}
+				{/pc}
+			</div>
+		</div>
+	</div>
+	<!--<div class="col-left">
+    	<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</div>
+    	{pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+        <ul class="list lh24 f14">
+{loop $data $r}
+	<li><span class="rt">{date('Y-m-d H:i:s',$r[inputtime])}</span>·<a href="{$r[url]}" target="_blank"{title_style($r[style])}>{$r[title]}</a></li>
+	{if $n%5==0}<li class="bk20 hr"></li>{/if}
+{/loop}
+        </ul>
+        <div id="pages" class="text-c">{$pages}</div>
+{/pc}
+  </div>
+    <div class="col-auto">
+        <div class="box">
+            <h5 class="title-2">频道总排行</h5>
+             {pc:content action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
+            <ul class="content digg">
+				{loop $data $r}
+					<li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+				{/loop}
+            </ul>
+            {/pc}
+        </div>
+        <div class="bk10"></div>
+        <div class="box">
+            <h5 class="title-2">频道本月排行</h5>
+             {pc:content action="hits" catid="$catid" num="8" order="monthviews DESC" cache="3600"}
+            <ul class="content rank">
+				{loop $data $r}
+				<li><span>{number_format($r[monthviews])}</span><a href="{$r[url]}"{title_style($r[style])} class="title" title="{$r[title]}">{str_cut($r[title],56,'...')}</a></li>
+				{/loop}
+            </ul>
+            {/pc}
+        </div>
+    </div>-->
+</div>
+{template "content","footer"}

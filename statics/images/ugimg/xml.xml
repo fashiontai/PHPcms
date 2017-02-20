@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<cu3er>
+<settings>
+	<auto_play><defaults symbol='circular' time='5'/></auto_play>
+	<preloader><tweenIn alpha='0'/></preloader>
+	<description><defaults heading_font='Trebuchet MS' paragraph_text_size='13' heading_text_margin='10, 25, 5, 25' round_corners='10, 10, 10, 10'/><tweenIn width='740' y='300' x='100'/></description>
+	
+</settings>
+<slides>
+		<slide><url>http://www.ugchina.com.cn/statics/images/ugimg/ban_4.jpg</url></slide>
+	
+		<transition direction='down' slicing='horizontal' num='5' shader='flat' z_multiplier='2' />
+	
+		<slide><url>http://www.ugchina.com.cn/statics/images/ugimg/ban_2.jpg</url><link target="_blank">http://www.baidu.com</link></slide>
+	
+		<transition direction='left' slicing='horizontal' num='7' shader='none' z_multiplier='2' />
+	
+		<slide><url>http://www.ugchina.com.cn/statics/images/ugimg/ban_3.jpg</url></slide>
+	
+		<transition direction='up' slicing='horizontal' num='5' shader='none' z_multiplier='2' />
+	
+		<slide><url>http://www.ugchina.com.cn/statics/images/ugimg/ban_1.jpg</url></slide>
+	
+		<transition direction='right' slicing='horizontal' num='7' shader='flat' z_multiplier='2' />
+		
+</slides>
+</cu3er>
+ 
+
+

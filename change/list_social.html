@@ -1,0 +1,126 @@
+{template "content","header"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}aihj/social.css?a=1"/>
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}aihj/nanoscroller.css?a=1"/>	
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}aihj/carousel_two.css?a=1"/>
+<script src="{JS_PATH}aihj/modernizr.js?a=1" type="text/javascript" charset="utf-8"></script>	
+<!--main-->
+<div class="main">
+	<div class="top">
+		<img src="{IMG_PATH}aihj/socialbanner.png"/>
+	</div>
+	<div class="businessPartner">
+		<div class="container">
+			<div class="row">
+				<h3 class="h3_middle">招聘岗位</h3>
+				<p class="h3_p_middle">CAREER OPPORTUNITIES</p>
+				{pc:content  action="lists" catid="$catid" order="id DESC" num="10"} 
+				<div class="businessPartner_div">
+					<span class="prev_bp">
+						<img src="{IMG_PATH}aihj/jiantou_zuo.png"/>
+					</span>
+					<div class="businessPartner_box">
+						<ul class="business_ul vmc-centered">
+							{loop $data $key $val} 
+							<li> 
+								<div class="business_ul_div">
+									<div class="bp_div">
+										<img src="{$val[thumb]}" alt="" />
+									</div>
+									<p class="bp_p">职位:{$val[title]}</p>
+									<span class="bp_btn" onclick="fadeSec(this)">查看详情</span>
+								</div>
+							</li> 
+							{/loop}
+						</ul>
+					</div>
+					<span class="next_bp">
+						<img src="{IMG_PATH}aihj/jiantou_you.png"/>
+					</span>
+				</div>
+				{/pc}
+				{pc:content  action="lists" catid="$catid" order="id DESC" num="10" moreinfo="1"}
+				{loop $data $id $r} 
+				<section class="bobm_box">
+					<h3 class="bobm_title">{$r[title]}</h3>
+					<div id="about" class="nano">
+						<div class="nano-content">{$r[content]}</div>
+					</div>
+					<span class="bobm_close" onclick="closeSec(this)">
+						<img src="{IMG_PATH}aihj/bobm_close.png"/>
+					</span>
+				</section>
+				{/loop}
+				{/pc}
+			</div>
+		</div>
+	</div>
+	<script src="{JS_PATH}aihj/jquery.nanoscroller.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{JS_PATH}aihj/bootstrap.min.js?a=1" type="text/javascript" charset="utf-8"></script>
+	<script src="{JS_PATH}aihj/carousel_two.js?a=1" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+			$('.business_ul').vmcarousel({
+				centered: true,
+				start_item: 0,
+				autoplay: false,
+				infinite: true
+			});
+			function fadeSec(obj){
+				var num = $(obj).parents('li').data('slide');
+				$('.businessPartner section').fadeOut();
+				$('.businessPartner section').eq(num).fadeIn();
+				$(".nano").nanoScroller();
+			}
+			function closeSec(obj){
+				$(obj).parents('section').fadeOut();
+			}
+		
+	</script>
+	<!--<div class="recruitmentProcess">
+		<div class="container">
+			<div class="row">
+				<h3 class="h3_middle">照片流程示意图</h3>
+				<p class="h3_p_middle">RECRUITMENT PROCESS</p>
+				<div class="rp_img">
+					<img src="{IMG_PATH}aihj/zhaopinliuc.png"/>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	<!--<div class="col-left">
+    	<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</div>
+    	{pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+        <ul class="list lh24 f14">
+{loop $data $r}
+	<li><span class="rt">{date('Y-m-d H:i:s',$r[inputtime])}</span>·<a href="{$r[url]}" target="_blank"{title_style($r[style])}>{$r[title]}</a></li>
+	{if $n%5==0}<li class="bk20 hr"></li>{/if}
+{/loop}
+        </ul>
+        <div id="pages" class="text-c">{$pages}</div>
+{/pc}
+  </div>
+    <div class="col-auto">
+        <div class="box">
+            <h5 class="title-2">频道总排行</h5>
+             {pc:content action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
+            <ul class="content digg">
+				{loop $data $r}
+					<li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+				{/loop}
+            </ul>
+            {/pc}
+        </div>
+        <div class="bk10"></div>
+        <div class="box">
+            <h5 class="title-2">频道本月排行</h5>
+             {pc:content action="hits" catid="$catid" num="8" order="monthviews DESC" cache="3600"}
+            <ul class="content rank">
+				{loop $data $r}
+				<li><span>{number_format($r[monthviews])}</span><a href="{$r[url]}"{title_style($r[style])} class="title" title="{$r[title]}">{str_cut($r[title],56,'...')}</a></li>
+				{/loop}
+            </ul>
+            {/pc}
+        </div>
+    </div>-->
+</div>
+{template "content","footer"}

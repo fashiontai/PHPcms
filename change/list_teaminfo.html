@@ -1,0 +1,177 @@
+{template "content","header"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}aihj/teaminfo_lb.css?a=1"/>
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}aihj/carousel.css?a=2"/>
+<script src="{JS_PATH}aihj/modernizr.js?a=1" type="text/javascript" charset="utf-8"></script>
+<!--main-->
+<div class="main">
+	<div class="team_top">
+		<img src="{IMG_PATH}aihj/teaminfobanner.png"/>
+	</div>
+	<div class="managers">
+		<div class="container">
+			<div class="row">
+				<h2 class="title">管理人员</h2>
+				<p class="title_upword">STAFF MEMBERS</p>
+				<div class="team_peoinfo">
+					{pc:content  action="position" posid="21" order="listorder DESC" num="10" thumb="1"}
+					{loop $data $key $r}
+					<section>
+						<div class="team_peoinfo_div">
+							<h3 class="team_peoinfo_title">{$r[title]}</h3>
+							<p class="team_peoinfo_des">{$r[description]}</p>
+							<p class="team_peoinfo_con">{$r[content]}</p>
+						</div>
+					</section>
+					{/loop}
+					{/pc}
+					
+					{pc:content  action="position" posid="21" order="listorder DESC" num="10" thumb="1"}
+					
+					<div class="imgbox">
+					    <div class="case-list-content">
+					        <div class="bd">
+					            <ul class="contentbox">
+					            	{loop $data $key $val}
+									<li>
+										<div class="bigarcs" href="">
+											<img src="{$val['thumb']}"/>
+										</div>
+										<p class="text_middle_p">{$val[description]}</p>
+									</li> 
+									{/loop}
+					            </ul>
+					        </div>
+					        <a class="changebtn btnleft prev" href="javascript:;"> ﹤ </a>
+					        <a class="changebtn btnright next" href="javascript:;"> ﹥ </a>
+					    </div>
+					</div>
+					{/pc}
+				</div>
+				<script src="{JS_PATH}aihj/superslider.js?a=1" type="text/javascript" charset="utf-8"></script>				
+				<script type="text/javascript">
+					$(function(){
+						var num = 0;
+					    $(".case-list-content").slide({
+					        mainCell:".bd ul",
+					        autoPage:true,
+					        effect:"leftLoop",
+				        	autoPlay:false,
+					        scroll:1,
+					        vis:5,
+					        startFun: function (i,c) {
+					        	if(i <=2){
+					        		num = i+2;
+					        	}else{
+					        		num = i-3;
+					        	}
+					        	$('.team_peoinfo section').fadeOut();
+					            $(".contentbox li").removeClass("active");
+					            $(".contentbox li").eq(i+3).addClass("active");
+					            $('.team_peoinfo section').eq(num).fadeIn('1000');
+					        },
+					    });
+					})
+				</script>
+			</div>
+		</div>
+	</div>
+	<div class="technical">
+		<div class="container">
+			<div class="row">
+				<h2 class="title">技术骨干</h2>
+				<p class="title_upword">TECHNICAL BACKBONE</p>
+				<div class="technical_peoinfo">
+					{pc:content  action="position" posid="22" order="listorder DESC" num="10" thumb="1" moreinfo="1"}
+					{loop $data $key $r}
+					<section>
+						<h3 class="h_bg">{$r[description]}</h3>
+						<dl>
+							<dt class="left"><img src="{$r['thumb']}"/></dt>
+							<dd class="left">
+								<h4 class="technical_peoinfo_h c_333">个人简介</h4>
+								<p class="technical_peoinfo_con">{$r[content]}</p>
+								<p class="technical_peoinfo_title">{$r[title]}</p>
+							</dd>
+						</dl>
+						<span class="bg_close" onclick="closeSpan(this)"><img src="{IMG_PATH}aihj/close.png"/></span>
+					</section>
+					{/loop}
+					{/pc}
+					<span class="prev_js s"></span>
+					{pc:content  action="position" posid="22" order="listorder DESC" num="10" thumb="1"}
+					<div class="technical_div">
+						<ul class="technical_js vmc-centered"> 
+						{loop $data $key $val}
+						<li>
+							<img src="{$val['thumb']}"/>
+							<h3 class="text_middle_h c_9b9">{$val[title]}</h3>
+							<p class="text_middle_p c_9b9">{$val[description]}</p>
+							<span class="technical_ul_down"></span>
+							<span class="click_more" onclick="fadeSpan(this)"><img src="{IMG_PATH}aihj/jiahao.png"/></span>
+						</li> 
+						{/loop}
+						</ul> 
+					</div>
+					<span class="next_js s"></span>
+					{/pc}
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="{JS_PATH}aihj/bootstrap.min.js?a=1" type="text/javascript" charset="utf-8"></script>
+	<script src="{JS_PATH}aihj/carousel.js?a=1" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+			$('.technical_js').vmcarousel({
+				centered: true,
+				start_item: 0,
+				autoplay: false,
+				infinite: true
+			});
+			function fadeSpan(obj){
+				var num = $(obj).parents('li').data('slide');
+				$('.technical_peoinfo section').fadeOut();
+				$('.technical_peoinfo section').eq(num).fadeIn();
+			}
+			function closeSpan(obj){
+				$(obj).parents('section').fadeOut();
+			}
+		
+	</script>
+	<!--<div class="col-left">
+    	<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</div>
+    	{pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+        <ul class="list lh24 f14">
+{loop $data $r}
+	<li><span class="rt">{date('Y-m-d H:i:s',$r[inputtime])}</span>·<a href="{$r[url]}" target="_blank"{title_style($r[style])}>{$r[title]}</a></li>
+	{if $n%5==0}<li class="bk20 hr"></li>{/if}
+{/loop}
+        </ul>
+        <div id="pages" class="text-c">{$pages}</div>
+{/pc}
+  </div>
+    <div class="col-auto">
+        <div class="box">
+            <h5 class="title-2">频道总排行</h5>
+             {pc:content action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
+            <ul class="content digg">
+				{loop $data $r}
+					<li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+				{/loop}
+            </ul>
+            {/pc}
+        </div>
+        <div class="bk10"></div>
+        <div class="box">
+            <h5 class="title-2">频道本月排行</h5>
+             {pc:content action="hits" catid="$catid" num="8" order="monthviews DESC" cache="3600"}
+            <ul class="content rank">
+				{loop $data $r}
+				<li><span>{number_format($r[monthviews])}</span><a href="{$r[url]}"{title_style($r[style])} class="title" title="{$r[title]}">{str_cut($r[title],56,'...')}</a></li>
+				{/loop}
+            </ul>
+            {/pc}
+        </div>
+    </div>-->
+</div>
+{template "content","footer"}

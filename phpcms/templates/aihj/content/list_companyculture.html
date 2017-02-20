@@ -1,0 +1,117 @@
+{template "content","header"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}aihj/video-js.css?a=1"/>
+<!--main-->
+<div class="main">
+	<div class="culture_top">
+		<img src="{IMG_PATH}aihj/companyinfo/firmbanner.png"/>
+	</div>
+	<div class="campaign">
+		<div class="container">
+			<div class="row">
+				<h2 class="title">企业宣传册</h2>
+				<p class="title_upword">ENTERPRISE FLYER</p>
+				{pc:content action="lists" catid="15" where="posids!=1" order="id DESC" num="3" moreinfo="1"} 
+				<ul class="campaign_ul">
+					{loop $data $key $r}
+					<li>
+						<dl>
+							<dt><img src="{$r['thumb']}" alt="" /></dt>
+							<dd>{$r['content']}</dd>
+						</dl>
+					</li>
+					{/loop}
+				</ul>
+				{/pc}
+			</div>
+		</div>
+	</div>
+	<div class="short">
+		<div class="container">
+			<div class="row">
+				<h2 class="title">企业短片</h2>
+				<p class="title_upword">CORPORATE VIDEO</p>
+				{pc:content  action="position" posid="24" order="listorder DESC" num="3"}
+				<ul class="short_ul">
+					{loop $data $key $val}
+					<li class="left">
+						<div class="short_ul_div">
+							<video id="example_video_1" class="video-js vjs-default-skin" controls preload="none"
+						      poster="{$val[thumb]}" data-setup="{}">
+							    <source src="{$val[content]}" type='video/mp4' />
+							    <track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+							    <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+							</video>
+						</div>
+					</li>
+					{/loop}
+					<li class="clear" style="height:0;"></li>
+				</ul>
+				{/pc}
+			</div>
+		</div>
+	</div>
+	<script src="{JS_PATH}aihj/video.js" type="text/javascript" charset="utf-8"></script>
+	<div class="signature">
+		<div class="container">
+			<div class="row">
+				<h2 class="title">特色活动</h2>
+				<p class="title_upword">SPECIAL ACTIVITIES</p>
+				{pc:content  action="position" posid="25" order="listorder DESC" num="10" thumb="1"}
+				<ul class="signature_ul">
+					{loop $data $key $val}
+					<li class="left">
+						<div class="left signature_left">
+							<a href="{$val['url']}">
+								<img src="{$val['thumb']}"/>
+							</a>
+						</div>
+						<div class="left signature_right">
+							<h3>{$val['title']}</h3>
+							<p>{$val[description]}</p>
+						</div>
+						<div class="clear"></div>
+					</li>
+					{/loop}
+					<li class="clear" style="border: 0;"></li>
+				</ul>
+				{/pc}
+			</div>
+		</div>
+	</div>
+	<!--<div class="col-left">
+    	<div class="crumbs"><a href="{siteurl($siteid)}">首页</a><span> > </span>{catpos($catid)} 列表</div>
+    	{pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page"}
+        <ul class="list lh24 f14">
+{loop $data $r}
+	<li><span class="rt">{date('Y-m-d H:i:s',$r[inputtime])}</span>·<a href="{$r[url]}" target="_blank"{title_style($r[style])}>{$r[title]}</a></li>
+	{if $n%5==0}<li class="bk20 hr"></li>{/if}
+{/loop}
+        </ul>
+        <div id="pages" class="text-c">{$pages}</div>
+{/pc}
+  </div>
+    <div class="col-auto">
+        <div class="box">
+            <h5 class="title-2">频道总排行</h5>
+             {pc:content action="hits" catid="$catid" num="10" order="views DESC" cache="3600"}
+            <ul class="content digg">
+				{loop $data $r}
+					<li><a href="{$r[url]}" target="_blank">{$r[title]}</a></li>
+				{/loop}
+            </ul>
+            {/pc}
+        </div>
+        <div class="bk10"></div>
+        <div class="box">
+            <h5 class="title-2">频道本月排行</h5>
+             {pc:content action="hits" catid="$catid" num="8" order="monthviews DESC" cache="3600"}
+            <ul class="content rank">
+				{loop $data $r}
+				<li><span>{number_format($r[monthviews])}</span><a href="{$r[url]}"{title_style($r[style])} class="title" title="{$r[title]}">{str_cut($r[title],56,'...')}</a></li>
+				{/loop}
+            </ul>
+            {/pc}
+        </div>
+    </div>-->
+</div>
+{template "content","footer"}
